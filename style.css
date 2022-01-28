@@ -58,7 +58,7 @@ body {
     position: relative;
     width: 200px;
     height: 200px;
-    background-color: lightgrey;
+    background-color: rgba(211, 211, 211, 0.166);
     border-radius: 50%;
 }
 
@@ -70,6 +70,7 @@ body {
     height: 65px;
     width: 3px;
     transform-origin: bottom center;
+    transition: all .5s ease-in
 }
 
 .needle.hour {
