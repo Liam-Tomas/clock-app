@@ -41,13 +41,13 @@ function clock() {
     const minutes = time.getMinutes();
     const month = time.getMonth();
     const seconds = time.getSeconds();
-    if (minutes < 10) {
+    if (seconds > 10 & minutes < 10) {
         times.innerHTML = clockHours + ":" + "0" + minutes + "." + seconds
     }
-    if (seconds < 10) {
+    if (seconds < 10 & minutes > 10) {
         times.innerHTML =  clockHours + ":"  + minutes + "." + "0" + seconds
     }
-    else {
+    if (seconds < 10 & minutes < 10) {
         times.innerHTML =  clockHours + ":" + minutes + "." + seconds
     }
 
