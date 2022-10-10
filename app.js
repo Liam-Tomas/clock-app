@@ -5,6 +5,7 @@ const timeEl = document.querySelector('.time')
 const dateEl = document.querySelector('.date')
 const toggle = document.querySelector('.toggle')
 const times = document.querySelector('.time')
+const times2 = document.querySelector('.time2')
 const date = document.querySelector('date')
 
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',];
