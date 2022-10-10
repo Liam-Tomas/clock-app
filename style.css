@@ -6,6 +6,7 @@
 
 :root {
     --primary-color: #000;
+    --primary-color2: rgba(201, 0, 0, 0.064);
     --secondary-color: #fff;
 }
 
@@ -36,16 +37,23 @@ body {
 .toggle {
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    font-size: .8rem;
     border: 0;
     border-radius: 4px;
-    padding: 27px 4px;
+    padding: 12px 12px;
     position: absolute;
     top: 100px;
-    border-radius: 50%;
+    border-radius: 5%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transition: .3s;
 }
 
 .toggle:focus {
     outline: none;
+}
+
+.toggle:hover {
+    cursor: pointer;
 }
 
 .clock-container {
@@ -87,6 +95,7 @@ body {
     transform: translate(-50%, -100%) rotate(0deg);
     height: 100px;
     background-color: #e74c3c;
+    width: 1.5px;
 }
 
 /* Example of how to center an element absolute within another element: */
@@ -130,12 +139,11 @@ body {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border-radius: 50%;
-    height: 18px;
-    width: 18px;
+    height: 16px;
+    width: 16px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    line-height: 18px;
     transition: all 0.5s ease-in;
-    font-size: 12px;
+    font-size: 10px;
 }

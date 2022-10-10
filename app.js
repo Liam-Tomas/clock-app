@@ -5,6 +5,7 @@ const timeEl = document.querySelector('.time')
 const dateEl = document.querySelector('.date')
 const toggle = document.querySelector('.toggle')
 const times = document.querySelector('.time')
+const date = document.querySelector('date')
 
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -36,15 +37,20 @@ function setTime() {
 function clock() {
     const time = new Date();
     const hours = time.getHours();
+    const clockHours = hours % 12;
     const minutes = time.getMinutes();
-    console.log(minutes.toString.length)
+    const month = time.getMonth();
     const seconds = time.getSeconds();
-    if (minutes.toString.length > 0) {
-        times.innerHTML = hours + ":" + minutes + "." + seconds
+    if (minutes < 10) {
+        times.innerHTML = clockHours + ":" + "0" + minutes + "." + seconds
+    }
+    if (seconds < 10) {
+        times.innerHTML =  clockHours + ":"  + minutes + "." + "0" + seconds
     }
     else {
-        times.innerHTML =  hours + ":" + "0" + minutes + "." + seconds
+        times.innerHTML =  clockHours + ":" + minutes + "." + seconds
     }
+
 }
 
 // below is a useful utility function called the scale function...allows us to map a range of numbers to another range of numbers...
