@@ -37,8 +37,14 @@ function clock() {
     const time = new Date();
     const hours = time.getHours();
     const minutes = time.getMinutes();
+    console.log(minutes.toString.length)
     const seconds = time.getSeconds();
-    times.innerHTML = hours + ":" + minutes + "." + seconds
+    if (minutes.toString.length > 0) {
+        times.innerHTML = hours + ":" + minutes + "." + seconds
+    }
+    else {
+        times.innerHTML =  hours + ":" + "0" + minutes + "." + seconds
+    }
 }
 
 // below is a useful utility function called the scale function...allows us to map a range of numbers to another range of numbers...
