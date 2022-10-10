@@ -4,6 +4,7 @@ const secondHand = document.querySelector('.second')
 const timeEl = document.querySelector('.time')
 const dateEl = document.querySelector('.date')
 const toggle = document.querySelector('.toggle')
+const times = document.querySelector('.time')
 
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -32,6 +33,14 @@ function setTime() {
     secondHand.style.transform = `translate(-50%, -100%) rotate(${scale(seconds, 0, 60, 0, 360)}deg)`;
 }
 
+function clock() {
+    const time = new Date();
+    const hours = time.getHours();
+    const minutes = time.getMinutes();
+    const seconds = time.getSeconds();
+    times.innerHTML = hours + ":" + minutes + "." + seconds
+}
+
 // below is a useful utility function called the scale function...allows us to map a range of numbers to another range of numbers...
 // In this case, it will be mapped with 0-12 and 0 - 360 as the ranges, to set the moving degrees of a clock...
 
@@ -40,4 +49,5 @@ const scale = (num, in_min, in_max, out_min, out_max) => {
 };
 
 // setTime();
-setInterval(setTime, 1000)
+setInterval(setTime, 300)
+setInterval(clock, 300)
