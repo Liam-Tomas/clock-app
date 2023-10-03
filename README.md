@@ -1,3 +1,3 @@
 # Clock App
-Simple clock app made with JavaScript.
+A simple clock made using JavaScript. 
 View @ https://liam-tomas.github.io/clock-app/
